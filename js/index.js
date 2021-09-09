@@ -27,6 +27,15 @@ function initMap() {
           infoWindow.setContent("Location found.");
           infoWindow.open(map);
           map.setCenter(pos);
+
+          var pyrmont = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          var request = {
+            location: pyrmont,
+            radius: '500',
+            query: 'catholic churches'
+          };          
+          service = new google.maps.places.PlacesService(map);
+          service.textSearch(request, putMarkers);
         },
         () => {
           handleLocationError(true, infoWindow, map.getCenter());
@@ -37,6 +46,15 @@ function initMap() {
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
+}
+
+function putMarkers(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      createMarker(results[i]);
+    }
+  }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {

@@ -8,6 +8,6 @@
   </head>
   <body>
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOYa5S7fyRsUTUgTIhu0McJTY1uA7ENP0&callback=initMap&libraries=&v=weekly" async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOYa5S7fyRsUTUgTIhu0McJTY1uA7ENP0&callback=initMap&libraries=places&v=weekly" async></script>
   </body>      
 </html>
