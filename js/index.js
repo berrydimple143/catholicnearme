@@ -57,7 +57,7 @@ function putMarkers(results, status) {
   }
 }
 
-function createMarker(place: google.maps.places.PlaceResult) {
+function createMarker(place) {
   if (!place.geometry || !place.geometry.location) return;
 
   const marker = new google.maps.Marker({
