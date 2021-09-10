@@ -31,7 +31,7 @@ function initMap() {
           var pyrmont = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
           var request = {
             location: pyrmont,
-            zoom: 16,
+            zoom: 20,
             radius: '300',
             query: 'catholic churches'
           };          
