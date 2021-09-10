@@ -7,7 +7,7 @@ let map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 29.8174782, lng: -95.6814899 },
-    zoom: 16,
+    zoom: 14,
   });
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");
@@ -31,8 +31,8 @@ function initMap() {
           var pyrmont = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
           var request = {
             location: pyrmont,
-            zoom: 16,
-            radius: '300',
+            zoom: 14,
+            radius: '600',
             query: 'catholic churches'
           };          
           service = new google.maps.places.PlacesService(map);
